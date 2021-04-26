@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>רשימת הקניות שלכם</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicons/icons8-shopping-cart-64.png" sizes="64x64">
+</head>
+<body style="background-color: lightgray;">
+    <div style="background-color: lightgray;" class="grid-container">
+        <div style="background-color: #9EBDFF;" class="Side-Table">
+            <h1 style="text-align:center;">בניית מדף המוצרים</h1>
+            <h4 style="text-align:right;">כתבו את שם המוצר והוסיפו אותו למדף המוצרים שלכם</h4>
+            <div class = "row" style="width:100%">
+                <button class="column" href="#" id="createProduct" onclick="createProduct()"><b>הוספה למדף</b></button>
+                <select name="categories" id="categories" style="text-align:center;">
+                    <option style="text-align:center;" value="default">בחר</option>
+                    <option style="text-align:right;" value="לחמים ומאפים">לחמים ומאפים</option>
+                    <option style="text-align:right;" value="גבינות">גבינות</option>
+                    <option style="text-align:right;" value="בשר">בשר</option>
+                    <option style="text-align:right;" value="שתייה">שתייה</option>
+                    <option style="text-align:right;" value="כלי בית">כלי בית</option>
+                    <option style="text-align:right;" value="ממתקים">ממתקים</option>
+                    <option style="text-align:right;" value="פירות">פירות</option>
+                    <option style="text-align:right;" value="ירקות">ירקות</option>
+                </select>
+                <input class="column" type="text" id="product" name="product" value="" style="text-align: right;" placeholder="הכניסו את שם המוצר">
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            <input type="text" id="myInput" onkeyup="search()" placeholder="...חפשו את המוצר על המדף" title="Type in a name" style="text-align:right; float: right; margin: 0px 10px">
+            <br>
+            <br>
+            <div style="overflow:auto; height:240px;">
+                <table style="width:95%; margin: 0px 0px 0px 10px" id="s_table">
+                    <tr style="background-color: navy;">
+                    <th width="20%" style="color: oldlace;">כמות</th>
+                    <th width="30%" style="color: oldlace;">מוצר</th>
+                    <th width="25%" style="color: oldlace;">הוסף</th>
+                    <th width="25%" style="color: oldlace;">הסר</th>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div style="background-color: #A950F7;" class="Logo">
+            <h1 style="text-align:center;"><b>רשימת הקניות שלכם</b></h1>
+            <div id = "rmv_list" style="margin: auto; width: 25%; padding: 10px;"/>
+        </div>   
+        <div style="background-color: #A950F7;" class="Center-Table">
+            <table style="width:100%" id="main_table">
+                <tr style="background-color: darkmagenta;">
+                <th style="color: oldlace;">כמות</th>
+                <th style="color: oldlace;">מוצר</th>
+                <th style="color: oldlace;">הסר</th>
+                <th style="color: oldlace;">לערוך</th>
+                <th style="color: oldlace;">?נקנה</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

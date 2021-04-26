@@ -1,0 +1,84 @@
+/* html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+} */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+html, body { height: 100%; margin: 0; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-rows: 0.5fr 2.1fr;
+    gap: 0px 15px;
+    grid-template-areas:
+      "Side-Table Logo"
+      "Side-Table Center-Table";
+  }
+  
+.Side-Table {
+    grid-area: Side-Table;
+    height: 100%;
+  }
+  
+.Center-Table {
+    grid-area: Center-Table;
+    height: 100%;
+  }
+
+.Logo { grid-area: Logo; }
+  
+@media all and (-ms-high-contrast:none) {
+.grid-container {
+    display: -ms-grid;
+    -ms-grid-columns: 0.7fr 1.3fr;
+    -ms-grid-rows: 0.5fr 2.1fr;
+}
+
+.Side-Table {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+}
+
+.Center-Table {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+}
+
+.Logo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+}
+}
+
+.row {
+    display: flex;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.input[type=number]{
+    width: 2px;
+} 
